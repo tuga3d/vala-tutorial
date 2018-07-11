@@ -1,6 +1,11 @@
 # project name and programming language
 project('com.github.tuga3d.vala-tutorial', 'vala', 'c')
 
+run_target(
+    'run',
+    command : join_paths(meson.build_root(), meson.project_name())
+)
+
 # Include the translations module
 i18n = import('i18n')
 
